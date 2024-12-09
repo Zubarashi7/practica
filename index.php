@@ -20,19 +20,19 @@
         //Variables principales.
         $name = (string) "Marcelo";
         $edad = (int) "19";
-        $altura = (float) "1.73"; //Normalmente podriamos usar un "float", sin embargo no hace la operacion correcta. Por lo que se cambia a "int".
+        $altura = (float) "1.73"; 
         $es_estudiante = (string) "Si";
 
         //Suma de 5 años.
-        $edad5 = (integer) $edad + 5;
+        $edad5 = (int) $edad + 5;
 
         //Convercion de metros a centimetros.
-        $altura_cm = (int) $altura * 100; 
+        $altura_cm = $altura * 100; //Surge un error si colocamos un int.
 
         //Salida.
         $output = "Hola $name, con una edad de $edad y con una altura de $altura metros. 🥵<br><br>
                 Eres estudiante? $es_estudiante.<br><br>
-                La suma de la edad $edad5. <br><br>
+                La suma de la edad: $edad5. <br><br>
                 Altura en centimetros: $altura_cm cm."
 
     ?>
