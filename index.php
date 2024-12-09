@@ -17,26 +17,36 @@
     </nav>
     </header>
     <?php
-    $name = (string) "Marcelo";
-    $edad = (int) "19";
-    $altura = (float) "1.73";
-    $es_estudiante = (bool) "Si";
-    $output = "
-    if ($es_estudiante == 1){
-        echo "Si";
-    };
+        //Variables principales.
+        $name = (string) "Marcelo";
+        $edad = (int) "19";
+        $altura = (float) "1.73"; //Normalmente podriamos usar un "float", sin embargo no hace la operacion correcta. Por lo que se cambia a "int".
+        $es_estudiante = (string) "Si";
+
+        //Suma de 5 años.
+        $edad5 = (integer) $edad + 5;
+
+        //Convercion de metros a centimetros.
+        $altura_cm = (int) $altura * 100; 
+
+        //Salida.
+        $output = "Hola $name, con una edad de $edad y con una altura de $altura metros. 🥵<br><br>
+                Eres estudiante? $es_estudiante.<br><br>
+                La suma de la edad $edad5. <br><br>
+                Altura en centimetros: $altura_cm cm."
+
     ?>
 
 
     <main>
         <h1>Pagina web</h1>
-        <h3>
+        <p>
             <?=
-            //En PHP, <?= es equivalente a "echo" o "print"
-                "Hola $name, con una edad de $edad y con una altura de $altura cm. 🥵<br>
-                Eres estudiante? $es_estudiante"t
+            //En PHP, <?= es equivalente a "echo" o "print".
+                //Imprime la salida de la variable "output".
+                $output
             ?>
-        </h3>
+        </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga facere rem veniam vel tenetur praesentium magni animi omnis unde in eum nesciunt ea, commodi porro, alias assumenda nulla earum!</p>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Cem6pxT8SaOcED8C3XfxDKKI54Tu_k5tWA&s" alt="Pablo de los Backyardigans">
 
