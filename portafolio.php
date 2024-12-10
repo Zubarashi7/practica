@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="css/portafolio.css">
     <title>Portafolio</title>
 
+        <!---Script JavaScript---->
+        <script>
+            // La funcion "refrescarPagina()" usa el metodo "location.reload()", para recargar la pagina "actual".
+            function reinicioLoteria() {
+                location.reload();
+            }
+        </script>
+        
 <body>
 
     <?php
@@ -63,16 +71,31 @@
         Implode:  https://www.php.net/manual/en/function.implode.php
         */
 
-        //La quinada
-        
-        $equipos = [
-            ["Real Madrid", "Barcelona"],["Valencia", "Getafe"],
-            ["Athletic Club", "Atletico De Madrid"], ["Espanyol", "Getafe"]
-            ["Girona", "Las Palmas"], ["", ""]
-        ];
+        //La quiniela
+        //Mediante un bucle crear un listado de partidos, mostrar un pronostico como "1" "X" "2"
 
+        $pronosticos = ["1","X","2"]; //Tres posibles pronosticos de un resultado
 
+        $partidos = [];
+        for ($p=0;$p<15;$p++){
+            $resultado = rand(0,2);
+            $partidos[] = $pronosticos[$resultado];
+        }
 
+        //var_dump($partidos);
+
+        //Creamos un array con la combinacion goandora de la quiniela
+
+        $combinacion_ganadora = ["1","2","X","1","2","X","1","2","X","1","2","X","1","2","X"];
+
+        //Comprobacion de aciertos
+
+        $aciertos = 0;
+        for ($p=0;$p<15;$p++){
+            if($partidos[$p] == $combinacion_ganadora[$p]) {
+                $aciertos++;
+            }
+        }
 
     ?>
 
@@ -99,13 +122,39 @@
 
         <button onclick="reinicioLoteria()">Reinicio</button>
 
-        <!---Script JavaScript---->
-        <script>
-            // La funcion "refrescarPagina()" usa el metodo "location.reload()", para recargar la pagina "actual".
-            function reinicioLoteria() {
-                location.reload();
-            }
-        </script>
+        <h1>La Quiniela</h1>
+        <p>Utilitza el nostre generador de combinacions per obtindre els teus pronòstics de La Quiniela.</p>
+        <table width="400px" border="1">
+            <tr>
+                <td>Partido</td>
+                <td>Pronostico</td>
+                <td>Ganadora</td>
+                <td>Aciertos</td>
+            </tr>
+
+            <?php for ($p=0;$p<15;$p++){?>
+                <tr>
+                    <td>Equipo Casa - Equipo Fuera</td>
+                    <td><?= $partidos[$p]?></td>
+                    <td><?= $combinacion_ganadora[$p]?></td>
+
+                    <?php if ($partidos[$p] == $combinacion_ganadora[$p]) {?>
+                        <td bgcolor="Green">Acierto</td>
+                    <?php } else { ?>
+                        <td bgcolor="Red">Fallo</td>
+                    <?php } ?>
+
+             <?php } ?>
+
+                </tr>
+
+        </table>
+
+        <p>Numero de aciertos: <?= $aciertos ?> </p>
+
+        <button onclick="reinicioLoteria()">Reinicio</button>
+
+
     </main>
     <footer>
         <p>&copy Derechos reservados por Marcelo 😉</p>
