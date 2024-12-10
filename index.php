@@ -5,17 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Practica David</title>
-</head>
-<body>
-    <header>
-    <nav>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Login</a></li>
-            <li><a href="">Register</a></li>
-        </ul>
-    </nav>
-    </header>
+
     <?php
         //Variables principales.
         $name = (string) "Marcelo";
@@ -36,7 +26,18 @@
                 Altura en centimetros: $altura_cm cm."
 
     ?>
-
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="portafolio.php">Portafolio</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </nav>
+    </header>
 
     <main>
         <h1>Pagina web</h1>
@@ -52,9 +53,15 @@
 
         <h2>Refrescar pagina</h2>
         <p>Presiona el siguiente boton para refrescar la pagina.</p>
+
+
+        <!---Creamos el boton para refrescar la pagina---->
+        <!---El boton utiliza el atributo "onclick" para llamar a la funcion "refrescarPagina()"---->
         <button onclick="refrescarPagina()">Refrescar</button>
 
+        <!---Script JavaScript---->
         <script>
+            // La funcion "refrescarPagina()" usa el metodo "location.reload()", para recargar la pagina "actual".
             function refrescarPagina() {
                 location.reload();
             }
@@ -63,8 +70,7 @@
     </main>
 
     <footer>
-        <p>&copy Derechos reservados por Marcelo :P</p>
-    </footer><changing
-
+        <p>&copy Derechos reservados por Marcelo 😉</p>
+    </footer>
 </body>
 </html>
