@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/portafolio.css"
+    <link rel="stylesheet" href="css/portafolio.css">
     <title>Portafolio</title>
 
+<body>
 
     <?php
         //Generar numeros principales
@@ -39,7 +40,7 @@
         //Entonces si sale "true" el bucle generara otro numero hasta que este en "false" o no se repita el numero.
         while (in_array($complementario, $numeros)) {
             $complementario = rand(1, 49); //Genera un numero aleatorio
-        }
+        }#454c4e
 
         //Generar el reintegro
         $reintegro = rand(0, 9);
@@ -47,7 +48,7 @@
         //Salida
         //Una forma mas de poder concatenar salidas o a una variable 😉
         $output = "<p> Combintació aleatòria: </p>" . implode(", ", $numeros) . "<br>"; // "implode" convierte el array "$numeros" en una cadena de texto.
-        $output .= "<p> Complementari: $complementario </p> <br>";
+        $output .= "<p> Complementari: $complementario </p>";
         $output .= "<p> Reintegrament: $reintegro </p>";
 
         /*
@@ -61,10 +62,14 @@
         Sort:     https://www.php.net/manual/en/function.sort.php
         Implode:  https://www.php.net/manual/en/function.implode.php
         */
+
+        
+
+
+
+
     ?>
 
-</head>
-<body>
     <header>
         <nav>
             <ul>
@@ -82,11 +87,19 @@
         <p>Utilitze el nostre generador de números aleatoris per obtindre la combinació guanyadora a les seues apostes de La Primitiva.</p>
         <p>Sols té que recarregar la web si vol obtindré altra combinació. Molta sort</p>
 
-        <p>
-            <?=
-                $output
-            ?>
-        </p>
+        <?=
+            $output
+        ?>
+
+        <button onclick="reinicioLoteria()">Reinicio</button>
+
+        <!---Script JavaScript---->
+        <script>
+            // La funcion "refrescarPagina()" usa el metodo "location.reload()", para recargar la pagina "actual".
+            function reinicioLoteria() {
+                location.reload();
+            }
+        </script>
     </main>
     <footer>
         <p>&copy Derechos reservados por Marcelo 😉</p>
