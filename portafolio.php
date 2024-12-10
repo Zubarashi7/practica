@@ -63,7 +63,13 @@
         Implode:  https://www.php.net/manual/en/function.implode.php
         */
 
+        //La quinada
         
+        $equipos = [
+            ["Real Madrid", "Barcelona"],["Valencia", "Getafe"],
+            ["Athletic Club", "Atletico De Madrid"], ["Espanyol", "Getafe"]
+            ["Girona", "Las Palmas"], ["", ""]
+        ];
 
 
 
