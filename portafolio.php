@@ -100,15 +100,16 @@
     ?>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Portafolio</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Register</a></li>
-            </ul>
-        </nav>
-        </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="portafolio.php">Portafolio</a></li>
+            <li><a href="arrays.php">Arrays</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </nav>
+    </header>
     <main>
         <h1>Loteria. La bruixeta de la sort</h1>
 
