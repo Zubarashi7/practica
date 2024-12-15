@@ -102,7 +102,7 @@
     <header>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="portafolio.php">Portafolio</a></li>
             <li><a href="arrays.php">Arrays</a></li>
             <li><a href="#">Login</a></li>

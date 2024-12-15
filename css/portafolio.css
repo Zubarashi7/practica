@@ -1,15 +1,15 @@
 /* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-	font-family: Arial, sans-serif;
+	font-family: Poppins;
 	line-height: 1.6;
 	margin: 0;
 	padding: 0;
-	background-color: goldenrod;
+	background-color: white;
 	color: #333;
 }
 
-
-/* Estilo para el header y la navegación */
 header {
 	background-color: #454c4e;
 	color: white;
@@ -46,8 +46,6 @@ nav ul li a:hover {
 	border-radius: 5px;
 }
 
-
-/* Estilo para el contenido principal */
 main {
 	padding: 20px;
 	text-align: center;
@@ -90,7 +88,6 @@ button:hover {
 }
 
 
-/* Estilo para la tabla */
 table {
 	margin: 20px auto;
 	border-collapse: collapse;
@@ -132,15 +129,12 @@ td[bgcolor="Red"] {
 }
 
 
-/* Estilo para el footer */
 footer {
-	background-color: #454c4e;
-	color: white;
-	text-align: center;
-	padding: 10px 20px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
 }
 
 
