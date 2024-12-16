@@ -11,7 +11,7 @@
 
     //Ejercicio 1   
     $setmana = ["Dilluns","Dimarts","Dimecres","Dijuous","Divendres","Dissalete","Diumenges"];
-    /*echo "Ejercicio 1";
+    echo "Ejercicio 1";
     echo "<br>";
     echo "<br>";
     echo "El tercer elemento es: $setmana[2]";
@@ -20,7 +20,6 @@
     print_r($setmana);
     echo "<br>";
     echo "<br>";
-    */
     //Ejercicio 2
 
     $horari = [
@@ -30,12 +29,10 @@
         "Dijous" => ["Seguridad y Alta Disponibilidad", "Administracion de Sistemas Informaticos", "Servicios de Red e Internet"],
         "Divendres" => ["Implantacion de Aplicaciones Web", "Administracion de Sistemas Informaticos", "Servicios de Red e Internet"]
     ];
-    /*
     echo "Ejercicio 2";
     echo "<br><br>";
     echo "El tercer element es: " . implode(", ", $horari["Dimecres"]);
     echo "<br><br>";
-    */
     //Ejercicio 3
 
     $professors = [
@@ -46,14 +43,12 @@
         "Jana" => ["Empresa e Iniciativa"],
         "Juanjo" => ["Administracion de Sistemas Informaticos"]
     ];
-    /*
     echo "Ejercicio 3";
     echo "<br>";
     echo "<br>";
     print_r($professors);
     echo "<br>";
     echo "<br>";
-    */
     //Ejercicio 4
 
     $cistelles = [
@@ -90,6 +85,34 @@
         $output4 .= "<p>{$cistella['preu']}</p>";
         $output4 .= "</div>";
     }
+
+    #Practica Optional
+
+    function creacionArray($inicio, $incremento, $final = 1){
+        return range($inicio, $incremento, $final);
+    }
+
+    $array = creacionArray(5,35,1);
+    print_r($array);
+
+    #contabilizar
+
+    function contarArray($array){
+        return count($array, COUNT_RECURSIVE);
+    }
+    echo "Total de elementos:" . contarArray($array);
+
+    #ordenar
+
+    function ordenarArray(&$array){
+        sort($array);
+    }
+    
+    ordenarArray($array);
+    echo "Array Ordenada: ";
+    print_r($array);
+
+
     ?>
 
     <header>
