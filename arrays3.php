@@ -7,7 +7,7 @@
 <body>
 
 <?php
-// Definimos las imágenes disponibles
+// Variables 
 $imagenes = ["pc", "pera", "naranja", "banca"];
 $resultat = [];
 
@@ -99,6 +99,37 @@ if ($contar["pc"] === 1 && $contar["pera"] === 3) {
 } else {
     echo "<p>No hi ha premi aquesta vegada. Torna a intentar-ho!</p>";
 }
+
+for($i = 1; $i < 11; $i=$i+2){
+    print "<p>$i</p>"; 
+ }
+
+ $victorias_madrid = 0;
+ $victorias_barça = 0;
+ $empates = 0;
+ 
+ $partidos = 100;
+ for ($i = 0; $i < $partidos; $i++) {
+     $resultado = rand(0, 100);
+     
+     if ($resultado <= 99) {
+         $victorias_barça++;
+     } elseif ($resultado == 100) {
+         $victorias_madrid++;
+     } else {
+         $empates++;
+     }
+ }
+ 
+ print "<p>Empates: $empates</p>";
+ print "<p>Victorias Barça: $victorias_barça</p>";
+ print "<p>Victorias Madrid: $victorias_madrid</p>"
+ 
+
 ?>
+
+
+
+
 </body>
 </html>
