@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>formulari</h3>
+    <form action="accion.php" method="post">
+        <p>Nom <input type="text" name="nombre" placeholder="Marcelo"></p>
+        <p>Cognom <input type="text" name="apellido" placeholder="Casas"></p>
+        <p>Edat <input type="text" name="edad" placeholder="19"></p>
+        <p>Carnet conducir <input type="checkbox" name="carnet"></p>
+        <p>Ciutats
+            <select name="menu_ciutat[]" multiple>
+                <option value="1">Valencia</option>
+                <option value="2">Madrid</option>
+                <option value="3">Barcelona</option>
+            </select>
+        </p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>
